@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "851092502095",
+    "firebase_url": "https://test2-ae18a.firebaseio.com",
+    "project_id": "test2-ae18a",
+    "storage_bucket": "test2-ae18a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:851092502095:android:4c58ba0c28a23394",
+        "android_client_info": {
+          "package_name": "org.apache.cordova.myApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "851092502095-tv3849a8ft5io4ivpqb0qt6lcg6ore0i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBh2teOTZalUoUAjmNcRoz0SScxgu-Q6q0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

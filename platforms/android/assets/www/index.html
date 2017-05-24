@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<!--<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <!-- <meta http-equiv="Content-Security-Policy" content="
+ default-src *;
+ style-src * 'unsafe-inline';
+ script-src * 'unsafe-inline';
+ media-src *; img-src * data:;
+" />-->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: http://192.168.43.241 https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">-->
+    <title>HK</title>
+</head>
+<script src="http://192.168.43.241:8080/target/target-script-min.js#anonymous"></script>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="lib/MSOpenTech/winstore-jscompat.js"></script>
+<!--<script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+
+<script type="text/javascript" src="js/init-styles.js"></script>
+<script type="text/javascript" src="js/my-app.js"></script>-->
+<script type="text/javascript" src="js/getstream.min.js"></script>
+
+<script type="text/javascript" src="lib/jquery/jquery-3.2.1.min.js"></script>
+<!--<script type="text/javascript" src="lib/jquery/jquery.mobile.js"></script>-->
+<script type="text/javascript" src="js/require.js"></script>
+<script type="text/javascript" src="js/FCMPlugin.js"></script>
+
+<script>
+    function onDeviceReady () {
+        console.log("Calling onDeviceReady()");
+        window.FirebasePlugin.getToken(function(token) {
+            // save this server-side and use it to push notifications to this device
+           console.log("window.FirebasePlugin.getToken");
+            console.log(token);
+        }, function(error) {
+            console.error(error);
+        });
+        window.FirebasePlugin.onTokenRefresh(function(token) {
+            // save this server-side and use it to push notifications to this device
+            console.log("window.FirebasePlugin.onTOkenRefresh");
+            console.log(token);
+        }, function(error) {
+            console.error(error);
+        });
+        window.FirebasePlugin.onNotificationOpen(function(notification) {
+            console.log(notification);
+        }, function(error) {
+            console.error(error);
+        });
+
+
+    }
+    setTimeout(function () {
+        document.addEventListener('deviceready', onDeviceReady, false);
+    }, 9000);
+
+</script>
+<body>
+<style>
+    .demo-card-header-pic .card-header {
+        height: 40vw;
+        background-size: cover;
+        background-position: center;
+    }
+</style>
+<div class="page">
+    <div class="page-content infinite-scroll infinite-scroll-top">
+        <div class="content-block-title">Styled Cards</div>
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url('img/013.jpg')" valign="bottom" class="card-header color-white no-border">Journey To Mountains</div>
+            <div class="card-content">
+                <div class="card-content-inner">
+                    <p class="color-gray">Posted on January 21, 2015</p>
+                    <p>Quisque eget vestibulum nulla...</p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="link">Like</a>
+                <a href="#" class="link">Read more</a>
+            </div>
+        </div>
+        <div class="content-block-title">Styled Cards</div>
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url('img/014.jpg')" valign="bottom" class="card-header color-white no-border">Journey To Mountains</div>
+            <div class="card-content">
+                <div class="card-content-inner">
+                    <p class="color-gray">Posted on January 21, 2015</p>
+                    <p>Quisque eget vestibulum nulla...</p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="link">Like</a>
+                <a href="#" class="link">Read more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
